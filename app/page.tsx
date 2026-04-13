@@ -1,4 +1,3 @@
-full code from gitub
 "use client";
 
 import { useState } from "react";
@@ -142,24 +141,24 @@ export default function Home() {
 
       {/* WHATSAPP BUTTON */}
       <a
-  href="https://wa.me/923091003892"
-  target="_blank"
-  style={{
-    position: "fixed",
-    bottom: "20px",
-    right: "20px",
-    background: "#25D366",
-    color: "white",
-    padding: "14px 18px",
-    borderRadius: "50px",
-    textDecoration: "none",
-    fontWeight: "bold",
-    boxShadow: "0 10px 25px rgba(0,0,0,0.3)",
-    zIndex: 999999
-  }}
->
-  WhatsApp
-</a>
+        href="https://wa.me/923091003892"
+        target="_blank"
+        style={{
+          position: "fixed",
+          bottom: "20px",
+          right: "20px",
+          background: "#25D366",
+          color: "white",
+          padding: "14px 18px",
+          borderRadius: "50px",
+          textDecoration: "none",
+          fontWeight: "bold",
+          boxShadow: "0 10px 25px rgba(0,0,0,0.3)",
+          zIndex: 9999
+        }}
+      >
+        WhatsApp
+      </a>
 
     </div>
   );
