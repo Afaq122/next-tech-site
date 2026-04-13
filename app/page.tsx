@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import emailjs from "@emailjs/browser";
 
 export default function Home() {
   const [form, setForm] = useState({
@@ -8,6 +9,24 @@ export default function Home() {
     email: "",
     message: ""
   });
+
+  const sendEmail = (e: any) => {
+    e.preventDefault();
+
+    emailjs.send(
+      "service_ck64bdt",
+      "template_cal7tuu",
+      {
+        name: form.name,
+        email: form.email,
+        message: form.message
+      },
+      "LIQaZ9_RMKrY_RhAq"
+    );
+
+    alert("Message sent successfully!");
+    setForm({ name: "", email: "", message: "" });
+  };
 
   return (
     <div style={{
@@ -19,172 +38,110 @@ export default function Home() {
 
       {/* NAVBAR */}
       <div style={{
-        position: "sticky",
-        top: 0,
         display: "flex",
         justifyContent: "space-between",
         alignItems: "center",
-        padding: "14px 60px",
+        padding: "16px 60px",
         background: "rgba(255,255,255,0.05)",
         backdropFilter: "blur(14px)",
-        borderBottom: "1px solid rgba(255,255,255,0.08)",
-        zIndex: 10
+        borderBottom: "1px solid rgba(255,255,255,0.08)"
       }}>
 
-        {/* LOGO + NAME */}
+        {/* LOGO */}
         <div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
           <img
             src="/logo.png"
-            alt="Next Tech Solution Logo"
-            style={{
-              width: "42px",
-              height: "42px",
-              borderRadius: "10px",
-              objectFit: "cover"
-            }}
+            alt="Logo"
+            style={{ width: 42, height: 42, borderRadius: 10 }}
           />
 
-          <h2 style={{
-            margin: 0,
-            fontWeight: 900,
-            letterSpacing: "0.5px",
-            color: "white"
-          }}>
+          <h2 style={{ margin: 0, color: "white", fontWeight: 900 }}>
             Next Tech Solution
           </h2>
         </div>
 
         <a href="#contact" style={{
           background: "linear-gradient(135deg, #22c55e, #16a34a)",
-          color: "white",
           padding: "10px 18px",
           borderRadius: "999px",
+          color: "white",
           textDecoration: "none",
-          fontWeight: 600
+          fontWeight: 700
         }}>
-          Contact Us
+          Contact
         </a>
       </div>
 
       {/* HERO */}
       <div style={{
         textAlign: "center",
-        padding: "130px 20px",
+        padding: "120px 20px",
         background: "radial-gradient(circle at top, #1e3a8a, #070b14 60%)"
       }}>
-        <h1 style={{
-          fontSize: "62px",
-          fontWeight: 900,
-          marginBottom: "18px",
-          color: "white"
-        }}>
-          High-Quality Insurance Leads
+        <h1 style={{ fontSize: 60, fontWeight: 900, color: "white" }}>
+          Insurance Leads That Convert
         </h1>
 
         <p style={{
-          maxWidth: "750px",
-          margin: "0 auto",
-          fontSize: "18px",
-          lineHeight: 1.7,
-          color: "#cbd5e1"
+          maxWidth: 700,
+          margin: "20px auto",
+          color: "#cbd5e1",
+          fontSize: 18
         }}>
-          Final Expense & Medicare leads for USA call centers, brokers and insurance agencies.
-          High-intent verified data that converts.
+          Final Expense & Medicare leads for USA call centers, brokers, and agencies.
+          High-intent, verified, real-time data.
         </p>
 
-        <div style={{ marginTop: "35px" }}>
-          <a href="#contact" style={{
-            background: "white",
-            color: "#0b1220",
-            padding: "14px 28px",
-            borderRadius: "999px",
-            textDecoration: "none",
-            fontWeight: 800,
-            marginRight: "10px"
-          }}>
-            Get Started
-          </a>
-
-          <a href="https://wa.me/923000000000" style={{
-            border: "1px solid #334155",
-            color: "white",
-            padding: "14px 28px",
-            borderRadius: "999px",
-            textDecoration: "none"
-          }}>
-            WhatsApp
-          </a>
-        </div>
-      </div>
-
-      {/* STATS */}
-      <div style={{
-        display: "flex",
-        justifyContent: "center",
-        gap: "20px",
-        flexWrap: "wrap",
-        marginTop: "-40px",
-        padding: "0 20px"
-      }}>
-        {[
-          "Verified High-Intent Leads",
-          "USA Targeted Data",
-          "Compliance Focused"
-        ].map((item, i) => (
-          <div key={i} style={{
-            background: "rgba(255,255,255,0.05)",
-            border: "1px solid rgba(255,255,255,0.08)",
-            padding: "22px 30px",
-            borderRadius: "16px",
-            minWidth: "220px",
-            textAlign: "center"
-          }}>
-            <h3 style={{ margin: 0, color: "white" }}>{item}</h3>
-          </div>
-        ))}
+        <a href="#contact" style={{
+          display: "inline-block",
+          marginTop: 20,
+          padding: "14px 28px",
+          background: "white",
+          color: "#0b1220",
+          borderRadius: 999,
+          fontWeight: 800,
+          textDecoration: "none"
+        }}>
+          Get Leads
+        </a>
       </div>
 
       {/* SERVICES */}
       <div style={{
-        padding: "100px 20px",
+        padding: "80px 20px",
         textAlign: "center"
       }}>
-        <h2 style={{
-          fontSize: "38px",
-          color: "white",
-          marginBottom: "50px"
-        }}>
+        <h2 style={{ color: "white", fontSize: 34 }}>
           Our Services
         </h2>
 
         <div style={{
           display: "flex",
           justifyContent: "center",
-          gap: "25px",
-          flexWrap: "wrap"
+          gap: 20,
+          flexWrap: "wrap",
+          marginTop: 40
         }}>
+
           {[
             {
               title: "Final Expense Leads",
-              desc: "High-intent insurance buyers ready to convert."
+              desc: "High-intent customers ready to buy insurance."
             },
             {
               title: "Medicare Leads",
-              desc: "Senior-focused Medicare enrollment opportunities."
+              desc: "Senior-focused enrollment opportunities."
             }
           ].map((s, i) => (
             <div key={i} style={{
-              width: "320px",
+              width: 300,
               background: "rgba(255,255,255,0.05)",
-              border: "1px solid rgba(255,255,255,0.08)",
-              padding: "28px",
-              borderRadius: "18px",
-              textAlign: "left"
+              padding: 25,
+              borderRadius: 16,
+              border: "1px solid rgba(255,255,255,0.08)"
             }}>
               <h3 style={{ color: "white" }}>{s.title}</h3>
-              <p style={{ color: "#94a3b8", lineHeight: 1.6 }}>
-                {s.desc}
-              </p>
+              <p style={{ color: "#94a3b8" }}>{s.desc}</p>
             </div>
           ))}
         </div>
@@ -192,53 +149,50 @@ export default function Home() {
 
       {/* CONTACT FORM */}
       <div id="contact" style={{
-        padding: "90px 20px",
+        padding: "80px 20px",
         background: "#0b1220",
         textAlign: "center"
       }}>
-        <h2 style={{ color: "white", fontSize: "34px" }}>
+        <h2 style={{ color: "white", fontSize: 34 }}>
           Contact Us
         </h2>
 
         <form
-          onSubmit={(e) => {
-            e.preventDefault();
-            alert("Message sent successfully!");
-          }}
+          onSubmit={sendEmail}
           style={{
-            maxWidth: "520px",
+            maxWidth: 500,
             margin: "30px auto",
             display: "flex",
             flexDirection: "column",
-            gap: "14px"
+            gap: 12
           }}
         >
           <input
-            placeholder="Your Name"
+            placeholder="Name"
             value={form.name}
             onChange={(e) => setForm({ ...form, name: e.target.value })}
-            style={inputStyle}
+            style={input}
           />
 
           <input
-            placeholder="Your Email"
+            placeholder="Email"
             value={form.email}
             onChange={(e) => setForm({ ...form, email: e.target.value })}
-            style={inputStyle}
+            style={input}
           />
 
           <textarea
-            placeholder="Your Message"
+            placeholder="Message"
             value={form.message}
             onChange={(e) => setForm({ ...form, message: e.target.value })}
-            style={{ ...inputStyle, height: "120px" }}
+            style={{ ...input, height: 120 }}
           />
 
           <button style={{
-            background: "linear-gradient(135deg, #22c55e, #16a34a)",
+            padding: 12,
+            borderRadius: 10,
             border: "none",
-            padding: "12px",
-            borderRadius: "10px",
+            background: "linear-gradient(135deg, #22c55e, #16a34a)",
             color: "white",
             fontWeight: 800,
             cursor: "pointer"
@@ -251,20 +205,20 @@ export default function Home() {
       {/* FOOTER */}
       <div style={{
         textAlign: "center",
-        padding: "25px",
-        color: "#64748b",
-        fontSize: "14px"
+        padding: 20,
+        color: "#64748b"
       }}>
-        © 2026 Next Tech Solution. All rights reserved.
+        © 2026 Next Tech Solution
       </div>
     </div>
   );
 }
 
-const inputStyle = {
-  padding: "12px",
-  borderRadius: "10px",
+const input = {
+  width: "100%",
+  padding: 12,
+  borderRadius: 10,
   border: "1px solid #334155",
-  background: "#0b1220",
+  background: "#070b14",
   color: "white"
 };
