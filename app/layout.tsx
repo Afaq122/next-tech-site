@@ -15,12 +15,12 @@ export default function RootLayout({
           color: "white",
         }}
       >
-        {/* NAVBAR (ONLY ONCE HERE) */}
+        {/* NAVBAR */}
         <div
           style={{
             display: "flex",
             justifyContent: "space-between",
-            padding: "20px 40px",
+            padding: "18px 40px",
             borderBottom: "1px solid rgba(255,255,255,0.08)",
             background: "rgba(255,255,255,0.03)",
             position: "sticky",
@@ -38,7 +38,8 @@ export default function RootLayout({
           </div>
         </div>
 
-        {children}
+        {/* PAGE CONTENT (CRITICAL LINE) */}
+        <main>{children}</main>
       </body>
     </html>
   );
