@@ -1,21 +1,18 @@
 "use client";
 
+import type { CSSProperties } from "react";
+
 export default function Home() {
   return (
     <div style={styles.page}>
 
-      {/* HERO */}
       <div style={styles.hero}>
-        <h1 style={styles.title}>
-          High Quality Insurance Leads
-        </h1>
-
+        <h1 style={styles.title}>High Quality Insurance Leads</h1>
         <p style={styles.subtitle}>
-          Final Expense, Medicare & USA Targeted Insurance Data for Call Centers & Agencies
+          Final Expense, Medicare & USA Targeted Insurance Data
         </p>
       </div>
 
-      {/* FEATURE BOXES */}
       <div style={styles.boxContainer}>
 
         <div style={styles.box}>
@@ -25,27 +22,25 @@ export default function Home() {
 
         <div style={styles.box}>
           <h2>USA Targeted Data</h2>
-          <p>Verified, filtered and clean USA insurance leads.</p>
+          <p>Verified and filtered insurance leads.</p>
         </div>
 
         <div style={styles.box}>
           <h2>Premium Quality</h2>
-          <p>High conversion data built for agencies & call centers.</p>
+          <p>High conversion data for agencies & call centers.</p>
         </div>
 
       </div>
 
-      {/* CTA SECTION */}
       <div style={styles.cta}>
-        <h2>Ready to Grow Your Business?</h2>
-        <p>Get premium insurance leads today and scale your sales.</p>
+        <h2>Grow Your Business Today</h2>
+        <p>Contact us for premium leads.</p>
 
         <a href="/contact" style={styles.button}>
           Get Started
         </a>
       </div>
 
-      {/* WHATSAPP BUTTON */}
       <a
         href="https://wa.me/923091003892"
         target="_blank"
@@ -58,10 +53,8 @@ export default function Home() {
   );
 }
 
-/* =======================
-   STYLES (IMPORTANT PART)
-======================= */
-const styles: any = {
+/* ✅ PROPER TYPE FIX */
+const styles: Record<string, CSSProperties> = {
   page: {
     background: "#070b14",
     color: "white",
@@ -76,15 +69,13 @@ const styles: any = {
   },
 
   title: {
-    fontSize: 50,
-    fontWeight: "bold"
+    fontSize: 50
   },
 
   subtitle: {
     color: "#cbd5e1",
     maxWidth: 700,
-    margin: "10px auto",
-    lineHeight: 1.6
+    margin: "10px auto"
   },
 
   boxContainer: {
