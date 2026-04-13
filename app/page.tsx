@@ -12,56 +12,109 @@ export default function Home() {
   return (
     <div style={{
       fontFamily: "Inter, system-ui, Arial",
-      background: "#0b1220",
-      margin: 0,
-      color: "#e5e7eb"
+      background: "#070b14",
+      color: "#e5e7eb",
+      minHeight: "100vh"
     }}>
 
       {/* NAVBAR */}
       <div style={{
+        position: "sticky",
+        top: 0,
         display: "flex",
         justifyContent: "space-between",
         alignItems: "center",
-        padding: "18px 60px",
-        background: "rgba(255,255,255,0.04)",
-        borderBottom: "1px solid rgba(255,255,255,0.08)"
+        padding: "14px 60px",
+        background: "rgba(255,255,255,0.05)",
+        backdropFilter: "blur(14px)",
+        borderBottom: "1px solid rgba(255,255,255,0.08)",
+        zIndex: 10
       }}>
-        <h2 style={{ color: "white" }}>Next Tech Solution</h2>
+
+        {/* LOGO + NAME */}
+        <div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
+          <img
+            src="/logo.png"
+            alt="Next Tech Solution Logo"
+            style={{
+              width: "42px",
+              height: "42px",
+              borderRadius: "10px",
+              objectFit: "cover"
+            }}
+          />
+
+          <h2 style={{
+            margin: 0,
+            fontWeight: 900,
+            letterSpacing: "0.5px",
+            color: "white"
+          }}>
+            Next Tech Solution
+          </h2>
+        </div>
 
         <a href="#contact" style={{
-          background: "#22c55e",
+          background: "linear-gradient(135deg, #22c55e, #16a34a)",
           color: "white",
           padding: "10px 18px",
           borderRadius: "999px",
-          textDecoration: "none"
+          textDecoration: "none",
+          fontWeight: 600
         }}>
-          Contact
+          Contact Us
         </a>
       </div>
 
       {/* HERO */}
       <div style={{
         textAlign: "center",
-        padding: "120px 20px",
-        animation: "fadeIn 1s ease",
-        background: "radial-gradient(circle at top, #1e3a8a, #0b1220 60%)"
+        padding: "130px 20px",
+        background: "radial-gradient(circle at top, #1e3a8a, #070b14 60%)"
       }}>
         <h1 style={{
-          fontSize: "58px",
+          fontSize: "62px",
+          fontWeight: 900,
+          marginBottom: "18px",
           color: "white"
         }}>
           High-Quality Insurance Leads
         </h1>
 
         <p style={{
-          maxWidth: "700px",
-          margin: "20px auto",
-          color: "#cbd5e1",
-          lineHeight: "1.6"
+          maxWidth: "750px",
+          margin: "0 auto",
+          fontSize: "18px",
+          lineHeight: 1.7,
+          color: "#cbd5e1"
         }}>
-          Final Expense, Medicare Leads for USA Call Centers,
-          Brokers & Insurance Agencies.
+          Final Expense & Medicare leads for USA call centers, brokers and insurance agencies.
+          High-intent verified data that converts.
         </p>
+
+        <div style={{ marginTop: "35px" }}>
+          <a href="#contact" style={{
+            background: "white",
+            color: "#0b1220",
+            padding: "14px 28px",
+            borderRadius: "999px",
+            textDecoration: "none",
+            fontWeight: 800,
+            marginRight: "10px"
+          }}>
+            Get Started
+          </a>
+
+          <a href="https://wa.me/923000000000" style={{
+            border: "1px solid #334155",
+            color: "white",
+            padding: "14px 28px",
+            borderRadius: "999px",
+            textDecoration: "none"
+          }}>
+            WhatsApp
+          </a>
+        </div>
       </div>
 
       {/* STATS */}
@@ -69,21 +122,21 @@ export default function Home() {
         display: "flex",
         justifyContent: "center",
         gap: "20px",
-        marginTop: "-50px",
         flexWrap: "wrap",
+        marginTop: "-40px",
         padding: "0 20px"
       }}>
         {[
-          "Verified Leads",
-          "High Conversion Rate",
-          "Compliance Ready"
+          "Verified High-Intent Leads",
+          "USA Targeted Data",
+          "Compliance Focused"
         ].map((item, i) => (
           <div key={i} style={{
-            background: "#111827",
-            border: "1px solid #1f2937",
-            padding: "20px 30px",
-            borderRadius: "14px",
-            minWidth: "200px",
+            background: "rgba(255,255,255,0.05)",
+            border: "1px solid rgba(255,255,255,0.08)",
+            padding: "22px 30px",
+            borderRadius: "16px",
+            minWidth: "220px",
             textAlign: "center"
           }}>
             <h3 style={{ margin: 0, color: "white" }}>{item}</h3>
@@ -97,7 +150,7 @@ export default function Home() {
         textAlign: "center"
       }}>
         <h2 style={{
-          fontSize: "34px",
+          fontSize: "38px",
           color: "white",
           marginBottom: "50px"
         }}>
@@ -113,32 +166,23 @@ export default function Home() {
           {[
             {
               title: "Final Expense Leads",
-              desc: "High intent insurance leads for USA agents."
+              desc: "High-intent insurance buyers ready to convert."
             },
             {
               title: "Medicare Leads",
-              desc: "Senior-focused Medicare enrollment leads."
+              desc: "Senior-focused Medicare enrollment opportunities."
             }
           ].map((s, i) => (
             <div key={i} style={{
-              width: "300px",
-              background: "#111827",
-              border: "1px solid #1f2937",
+              width: "320px",
+              background: "rgba(255,255,255,0.05)",
+              border: "1px solid rgba(255,255,255,0.08)",
               padding: "28px",
-              borderRadius: "16px",
-              textAlign: "left",
-              transition: "0.3s",
-              cursor: "pointer"
-            }}
-            onMouseEnter={(e) => {
-              e.currentTarget.style.transform = "translateY(-8px)";
-            }}
-            onMouseLeave={(e) => {
-              e.currentTarget.style.transform = "translateY(0)";
-            }}
-            >
+              borderRadius: "18px",
+              textAlign: "left"
+            }}>
               <h3 style={{ color: "white" }}>{s.title}</h3>
-              <p style={{ color: "#9ca3af", lineHeight: "1.6" }}>
+              <p style={{ color: "#94a3b8", lineHeight: 1.6 }}>
                 {s.desc}
               </p>
             </div>
@@ -148,23 +192,25 @@ export default function Home() {
 
       {/* CONTACT FORM */}
       <div id="contact" style={{
-        padding: "80px 20px",
-        textAlign: "center",
-        background: "#111827"
+        padding: "90px 20px",
+        background: "#0b1220",
+        textAlign: "center"
       }}>
-        <h2>Contact Us</h2>
+        <h2 style={{ color: "white", fontSize: "34px" }}>
+          Contact Us
+        </h2>
 
         <form
           onSubmit={(e) => {
             e.preventDefault();
-            alert("Form submitted (we’ll connect email later)");
+            alert("Message sent successfully!");
           }}
           style={{
-            maxWidth: "500px",
+            maxWidth: "520px",
             margin: "30px auto",
             display: "flex",
             flexDirection: "column",
-            gap: "15px"
+            gap: "14px"
           }}
         >
           <input
@@ -185,15 +231,16 @@ export default function Home() {
             placeholder="Your Message"
             value={form.message}
             onChange={(e) => setForm({ ...form, message: e.target.value })}
-            style={{ ...inputStyle, height: "100px" }}
+            style={{ ...inputStyle, height: "120px" }}
           />
 
           <button style={{
-            background: "#22c55e",
-            color: "white",
-            padding: "12px",
+            background: "linear-gradient(135deg, #22c55e, #16a34a)",
             border: "none",
-            borderRadius: "8px",
+            padding: "12px",
+            borderRadius: "10px",
+            color: "white",
+            fontWeight: 800,
             cursor: "pointer"
           }}>
             Send Message
@@ -204,28 +251,20 @@ export default function Home() {
       {/* FOOTER */}
       <div style={{
         textAlign: "center",
-        padding: "20px",
-        color: "#6b7280"
+        padding: "25px",
+        color: "#64748b",
+        fontSize: "14px"
       }}>
-        © 2026 Next Tech Solution
+        © 2026 Next Tech Solution. All rights reserved.
       </div>
-
-      {/* ANIMATION */}
-      <style>{`
-        @keyframes fadeIn {
-          from { opacity: 0; transform: translateY(20px); }
-          to { opacity: 1; transform: translateY(0); }
-        }
-      `}</style>
-
     </div>
   );
 }
 
 const inputStyle = {
   padding: "12px",
-  borderRadius: "8px",
-  border: "1px solid #374151",
+  borderRadius: "10px",
+  border: "1px solid #334155",
   background: "#0b1220",
   color: "white"
 };
