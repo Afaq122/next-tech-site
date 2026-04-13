@@ -147,14 +147,17 @@ export default function Home() {
     position: "fixed",
     bottom: "20px",
     right: "20px",
-    background: "red",
+    background: "#25D366",
     color: "white",
-    padding: "20px",
-    fontSize: "20px",
+    padding: "14px 18px",
+    borderRadius: "50px",
+    textDecoration: "none",
+    fontWeight: "bold",
+    boxShadow: "0 10px 25px rgba(0,0,0,0.3)",
     zIndex: 999999
   }}
 >
-  WHATSAPP TEST
+  WhatsApp
 </a>
 
     </div>
