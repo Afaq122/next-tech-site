@@ -1,19 +1,16 @@
+"use client";
+
 export default function Home() {
   return (
     <div style={styles.page}>
 
-      {/* HERO */}
       <div style={styles.hero}>
-        <h1 style={styles.title}>
-          High Quality Insurance Leads
-        </h1>
-
+        <h1 style={styles.title}>High Quality Insurance Leads</h1>
         <p style={styles.subtitle}>
-          Final Expense, Medicare & USA Targeted Insurance Data for Call Centers & Agencies
+          Final Expense, Medicare & USA Targeted Insurance Data
         </p>
       </div>
 
-      {/* FEATURE BOXES */}
       <div style={styles.boxContainer}>
 
         <div style={styles.box}>
@@ -23,32 +20,26 @@ export default function Home() {
 
         <div style={styles.box}>
           <h2>USA Targeted Data</h2>
-          <p>Verified and filtered leads from USA market.</p>
+          <p>Verified USA insurance leads.</p>
         </div>
 
         <div style={styles.box}>
           <h2>Premium Quality</h2>
-          <p>Clean, validated and high conversion data sets.</p>
+          <p>High conversion clean data sets.</p>
         </div>
 
       </div>
 
-      {/* CTA */}
       <div style={styles.cta}>
-        <h2>Grow Your Insurance Business Today</h2>
-        <p>Contact us to get high quality leads instantly.</p>
+        <h2>Grow Your Business Today</h2>
+        <p>Contact us for premium leads.</p>
 
         <a href="/contact" style={styles.button}>
           Get Started
         </a>
       </div>
 
-      {/* WHATSAPP */}
-      <a
-        href="https://wa.me/923091003892"
-        target="_blank"
-        style={styles.whatsapp}
-      >
+      <a href="https://wa.me/923091003892" style={styles.whatsapp}>
         WhatsApp
       </a>
 
@@ -56,8 +47,7 @@ export default function Home() {
   );
 }
 
-/* STYLES */
-const styles: any = {
+const styles = {
   page: {
     background: "#070b14",
     color: "white",
@@ -72,14 +62,13 @@ const styles: any = {
   },
 
   title: {
-    fontSize: 50,
-    marginBottom: 10
+    fontSize: 50
   },
 
   subtitle: {
     color: "#cbd5e1",
     maxWidth: 700,
-    margin: "0 auto"
+    margin: "10px auto"
   },
 
   boxContainer: {
