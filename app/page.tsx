@@ -4,14 +4,12 @@ import { useState } from "react";
 import emailjs from "@emailjs/browser";
 
 export default function Home() {
-  // FORM STATE
   const [form, setForm] = useState({
     name: "",
     email: "",
     message: ""
   });
 
-  // SEND EMAIL FUNCTION
   const sendEmail = (e: any) => {
     e.preventDefault();
 
@@ -68,7 +66,11 @@ export default function Home() {
           Insurance Leads That Convert
         </h1>
 
-        <p style={{ color: "#cbd5e1", maxWidth: 700, margin: "20px auto" }}>
+        <p style={{
+          color: "#cbd5e1",
+          maxWidth: 700,
+          margin: "20px auto"
+        }}>
           Final Expense & Medicare leads for USA insurance agencies.
         </p>
       </div>
@@ -136,11 +138,29 @@ export default function Home() {
       }}>
         © 2026 Next Tech Solution
       </div>
+
+      {/* WHATSAPP BUTTON */}
+      <a
+  href="https://wa.me/923091003892"
+  target="_blank"
+  style={{
+    position: "fixed",
+    bottom: "20px",
+    right: "20px",
+    background: "red",
+    color: "white",
+    padding: "20px",
+    fontSize: "20px",
+    zIndex: 999999
+  }}
+>
+  WHATSAPP TEST
+</a>
+
     </div>
   );
 }
 
-// INPUT STYLE
 const inputStyle = {
   padding: 12,
   borderRadius: 10,
@@ -149,22 +169,3 @@ const inputStyle = {
   color: "white",
   outline: "none"
 };
-<a
-  href="https://wa.me/923091003892"
-  target="_blank"
-  style={{
-    position: "fixed",
-    bottom: "20px",
-    right: "20px",
-    background: "#25D366",
-    color: "white",
-    padding: "14px 18px",
-    borderRadius: "50px",
-    textDecoration: "none",
-    fontWeight: "bold",
-    boxShadow: "0 10px 25px rgba(0,0,0,0.3)",
-    zIndex: 999
-  }}
->
-  WhatsApp
-</a>
