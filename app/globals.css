@@ -284,3 +284,70 @@ a {
     padding: 20px;
   }
 }
+
+.home {
+  padding-top: 100px;
+  text-align: center;
+}
+
+.hero {
+  padding: 80px 20px;
+}
+
+.hero h1 {
+  font-size: 52px;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  color: #cbd5e1;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 25px;
+  background: linear-gradient(135deg, #2563eb, #22c55e);
+  color: white;
+  border-radius: 30px;
+  text-decoration: none;
+}
+
+.features {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  padding: 60px 20px;
+}
+
+.card {
+  width: 260px;
+  padding: 22px;
+  border-radius: 16px;
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.08);
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  background: rgba(255,255,255,0.1);
+}
+
+.cta {
+  padding: 80px 20px;
+  background: linear-gradient(135deg, #0f172a, #070b14);
+  margin-top: 40px;
+}
+
+.whatsapp {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #25D366;
+  padding: 15px 18px;
+  border-radius: 50px;
+  color: white;
+  text-decoration: none;
+}

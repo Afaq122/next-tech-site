@@ -4,87 +4,64 @@ import { motion } from "framer-motion";
 
 export default function Home() {
   return (
-    <div>
+    <div className="home">
 
       {/* HERO */}
       <section className="hero">
 
         <motion.h1
-          initial={{ opacity: 0, y: 40 }}
+          initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
+          transition={{ duration: 0.5 }}
         >
           Premium Insurance Leads That Convert
         </motion.h1>
 
         <motion.p
-          initial={{ opacity: 0, y: 40 }}
+          initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.2, duration: 0.6 }}
+          transition={{ delay: 0.2 }}
         >
-          Final Expense • Medicare • Life Insurance • Verified Data Vendor
+          Final Expense • Life Insurance • Medicare • Verified Data Vendor
         </motion.p>
 
         <motion.a
           href="/contact"
           className="btn"
-          initial={{ opacity: 0, scale: 0.8 }}
+          initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
-          transition={{ delay: 0.4 }}
+          transition={{ delay: 0.3 }}
         >
-          Get Leads Now
+          Get Started
         </motion.a>
 
       </section>
 
-      {/* SERVICES */}
-      <section className="section">
+      {/* FEATURES */}
+      <section className="features">
 
-        <h2 className="title">Our Services</h2>
+        <motion.div className="card" whileHover={{ scale: 1.05 }}>
+          <h3>Final Expense Leads</h3>
+          <p>High intent insurance buyers ready to close.</p>
+        </motion.div>
 
-        <div className="grid">
+        <motion.div className="card" whileHover={{ scale: 1.05 }}>
+          <h3>Life Insurance Leads</h3>
+          <p>Verified USA targeted insurance prospects.</p>
+        </motion.div>
 
-          {[
-            {
-              title: "Final Expense Leads",
-              desc: "High intent insurance buyers ready to convert"
-            },
-            {
-              title: "Life Insurance Leads",
-              desc: "Verified USA targeted insurance prospects"
-            },
-            {
-              title: "Data Vendor Services",
-              desc: "Real-time lead IDs for call centers"
-            }
-          ].map((item, i) => (
-            <motion.div
-              key={i}
-              className="card"
-              initial={{ opacity: 0, y: 40 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: i * 0.2 }}
-            >
-              <h3>{item.title}</h3>
-              <p>{item.desc}</p>
-            </motion.div>
-          ))}
+        <motion.div className="card" whileHover={{ scale: 1.05 }}>
+          <h3>Data Vendor</h3>
+          <p>Real-time lead IDs for call centers.</p>
+        </motion.div>
 
-        </div>
       </section>
 
-      {/* CTA SECTION */}
-      <motion.section
-        className="cta"
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        viewport={{ once: true }}
-      >
-        <h2>Ready to Scale Your Insurance Business?</h2>
-        <p>Join agencies already closing more deals with our data</p>
-        <a href="/contact" className="btn">Contact Us</a>
-      </motion.section>
+      {/* CTA */}
+      <section className="cta">
+        <h2>Scale Your Insurance Business Today</h2>
+        <p>Join agencies already closing more deals</p>
+      </section>
 
       {/* WHATSAPP */}
       <a
