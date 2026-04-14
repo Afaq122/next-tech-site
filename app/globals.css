@@ -1,115 +1,51 @@
-body {
-  margin: 0;
-  font-family: Arial;
-  background: #070b14;
-  color: white;
-}
-
-/* NAVBAR */
+/* NAVBAR FIXED */
 .navbar {
   display: flex;
   justify-content: space-between;
-  padding: 15px 40px;
+  align-items: center;
+  padding: 15px 25px; /* reduced padding so it fits */
   background: rgba(0,0,0,0.7);
   position: fixed;
   width: 100%;
   top: 0;
   backdrop-filter: blur(10px);
+  box-sizing: border-box;
 }
 
+/* LOGO */
 .logo {
   display: flex;
   align-items: center;
   gap: 10px;
+  flex-shrink: 0;
 }
 
-.logo img {
-  height: 40px;
-}
-
+/* NAV LINKS FIX */
 .nav-links {
   display: flex;
-  gap: 20px;
+  gap: 15px; /* smaller gap so everything fits */
+  justify-content: flex-start;
+  flex-wrap: nowrap;
+  overflow: hidden;
 }
 
+/* LINKS STYLE */
 .nav-links a {
   color: white;
   text-decoration: none;
+  font-size: 14px; /* slightly smaller so it fits */
+  white-space: nowrap;
 }
 
-/* HERO */
-.container {
-  padding-top: 100px;
-}
+/* MOBILE SAFETY (IMPORTANT) */
+@media (max-width: 600px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
 
-.hero {
-  text-align: center;
-  padding: 80px 20px;
-}
-
-.hero h1 {
-  font-size: 50px;
-}
-
-/* SERVICES */
-.services {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  flex-wrap: wrap;
-}
-
-.card {
-  width: 250px;
-  padding: 20px;
-  background: rgba(255,255,255,0.05);
-  border-radius: 10px;
-}
-
-/* CTA */
-.cta {
-  text-align: center;
-  margin: 80px 0;
-}
-
-.btn {
-  padding: 12px 25px;
-  background: #22c55e;
-  color: white;
-  text-decoration: none;
-  border-radius: 30px;
-}
-
-/* CONTACT */
-.contact {
-  padding: 120px 20px;
-  text-align: center;
-}
-
-.form {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  max-width: 400px;
-  margin: auto;
-}
-
-input, textarea {
-  padding: 12px;
-  border-radius: 8px;
-  border: none;
-  background: #111827;
-  color: white;
-}
-
-/* WHATSAPP */
-.whatsapp {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background: #25D366;
-  padding: 15px;
-  border-radius: 50px;
-  color: white;
-  text-decoration: none;
+  .nav-links {
+    flex-wrap: wrap;
+  }
 }
