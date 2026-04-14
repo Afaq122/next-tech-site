@@ -3,35 +3,43 @@ import Link from "next/link";
 
 export const metadata = {
   title: "Next Tech Solution",
-  description: "Insurance Leads & Data Vendor"
+  description: "Premium insurance leads and data vendor services",
 };
 
 export default function RootLayout({
-  children
+  children,
 }: {
   children: React.ReactNode;
 }) {
   return (
     <html lang="en">
       <body>
-
-        {/* NAVBAR */}
-        <header className="navbar">
-          <div className="logo">
-            <img src="/logo.png" alt="logo" />
-            <span>Next Tech Solution</span>
+        <header className="site-header">
+          <div className="brand">
+            <div className="brand-mark">N</div>
+            <div>
+              <div className="brand-name">Next Tech Solution</div>
+              <div className="brand-tag">Insurance Leads & Data Vendor</div>
+            </div>
           </div>
 
-          <nav className="nav-links">
-            <Link href="/">Home</Link>
-            <Link href="/about">About</Link>
-            <Link href="/services">Services</Link>
-            <Link href="/contact">Contact</Link>
+          <nav className="nav">
+            <Link href="/" className="nav-link">
+              Home
+            </Link>
+            <Link href="/about" className="nav-link">
+              About
+            </Link>
+            <Link href="/services" className="nav-link">
+              Services
+            </Link>
+            <Link href="/contact" className="nav-link nav-cta">
+              Contact
+            </Link>
           </nav>
         </header>
 
-        <main>{children}</main>
-
+        <main className="page-shell">{children}</main>
       </body>
     </html>
   );
