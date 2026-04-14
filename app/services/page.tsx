@@ -6,36 +6,34 @@ export default function Services() {
         <h1>Our Services</h1>
         <p>
           We provide premium insurance leads and data solutions to help
-          your business grow faster.
+          your business grow faster and close more deals.
         </p>
       </div>
 
       <div className="services-grid">
 
         <div className="service-card">
-          <h2>Life Insurance Leads</h2>
+          <h2>High-Converting Final Expense Leads</h2>
           <p>
-            High-quality life insurance leads with verified customer data.
-            These leads are targeted and designed to help agents close
-            more policies efficiently.
+            Reach motivated buyers actively searching for final expense
+            insurance. Our leads are verified and optimized for higher
+            closing rates.
           </p>
         </div>
 
         <div className="service-card">
-          <h2>Medicare Leads</h2>
+          <h2>Exclusive Medicare Leads</h2>
           <p>
-            Reach qualified Medicare prospects ready to enroll.
-            Our data ensures better targeting and higher conversion
-            rates for your campaigns.
+            Connect with qualified Medicare prospects ready to enroll.
+            Increase your conversions with accurate and targeted data.
           </p>
         </div>
 
         <div className="service-card">
-          <h2>Final Expense Leads</h2>
+          <h2>Verified Life Insurance Prospects</h2>
           <p>
-            Connect with customers actively looking for final expense
-            insurance. Perfect for agents focusing on senior markets
-            and quick conversions.
+            Access high-quality life insurance leads with real-time data.
+            Designed for agents and call centers focused on performance.
           </p>
         </div>
 
