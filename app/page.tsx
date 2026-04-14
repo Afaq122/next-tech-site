@@ -1,66 +1,51 @@
 "use client";
 
-import { motion } from "framer-motion";
-
 export default function Home() {
   return (
     <div className="home">
 
       {/* HERO */}
       <section className="hero">
+        <h1>Premium Insurance Leads That Convert</h1>
+        <p>
+          Final Expense • Medicare • Life Insurance Leads for USA Agencies
+        </p>
 
-        <motion.h1
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-        >
-          Premium Insurance Leads That Convert
-        </motion.h1>
-
-        <motion.p
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.2 }}
-        >
-          Final Expense • Life Insurance • Medicare • Verified Data Vendor
-        </motion.p>
-
-        <motion.a
-          href="/contact"
-          className="btn"
-          initial={{ opacity: 0, scale: 0.9 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ delay: 0.3 }}
-        >
+        <a href="/contact" className="btn">
           Get Started
-        </motion.a>
-
+        </a>
       </section>
 
-      {/* FEATURES */}
+      {/* SERVICES CARDS */}
       <section className="features">
 
-        <motion.div className="card" whileHover={{ scale: 1.05 }}>
-          <h3>Final Expense Leads</h3>
-          <p>High intent insurance buyers ready to close.</p>
-        </motion.div>
+        <div className="card">
+          <h2>High-Converting Final Expense Leads</h2>
+          <p>
+            Reach motivated buyers actively searching for final expense insurance.
+          </p>
+        </div>
 
-        <motion.div className="card" whileHover={{ scale: 1.05 }}>
-          <h3>Life Insurance Leads</h3>
-          <p>Verified USA targeted insurance prospects.</p>
-        </motion.div>
+        <div className="card">
+          <h2>Exclusive Medicare Leads</h2>
+          <p>
+            Connect with qualified Medicare prospects ready to enroll.
+          </p>
+        </div>
 
-        <motion.div className="card" whileHover={{ scale: 1.05 }}>
-          <h3>Data Vendor</h3>
-          <p>Real-time lead IDs for call centers.</p>
-        </motion.div>
+        <div className="card">
+          <h2>Verified Life Insurance Prospects</h2>
+          <p>
+            High-quality data designed for agents and call centers.
+          </p>
+        </div>
 
       </section>
 
       {/* CTA */}
       <section className="cta">
         <h2>Scale Your Insurance Business Today</h2>
-        <p>Join agencies already closing more deals</p>
+        <p>Join agencies closing more deals with better data</p>
       </section>
 
       {/* WHATSAPP */}

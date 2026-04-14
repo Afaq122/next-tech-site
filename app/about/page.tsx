@@ -6,7 +6,7 @@ export default function About() {
         <h1>About Next Tech Solution</h1>
         <p>
           We help insurance agencies scale faster with high-quality,
-          conversion-focused leads and real-time data solutions.
+          conversion-focused leads.
         </p>
       </div>
 
@@ -15,29 +15,26 @@ export default function About() {
         <div className="about-card">
           <h2>Who We Are</h2>
           <p>
-            Next Tech Solution is a data-driven company specializing in
-            insurance leads for the USA market. We work with agencies,
-            call centers, and individual agents to provide verified,
-            high-intent prospects that convert into real sales.
+            A results-driven company providing verified insurance leads
+            for USA agencies and call centers.
           </p>
         </div>
 
         <div className="about-card">
           <h2>What We Do</h2>
           <p>
-            We provide Final Expense, Life Insurance, and Medicare leads
-            along with real-time lead IDs. Our goal is to help your team
-            close more deals by delivering accurate and fresh data.
+            We deliver Final Expense, Medicare, and Life Insurance leads
+            with real-time data for better conversions.
           </p>
         </div>
 
         <div className="about-card">
           <h2>Why Choose Us</h2>
           <p>
-            ✔ High-quality verified leads  
-            ✔ Real-time data delivery  
-            ✔ Fast support for agencies  
-            ✔ Trusted by call centers  
+            ✔ Verified Leads <br />
+            ✔ High Conversion Rate <br />
+            ✔ Fast Delivery <br />
+            ✔ Trusted by Agencies
           </p>
         </div>
 
