@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export const metadata = {
   title: "Next Tech Solution",
-  description: "Premium insurance leads and data vendor services",
+  description: "Insurance Leads & Data Vendor",
 };
 
 export default function RootLayout({
@@ -14,32 +14,33 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <header className="site-header">
-          <div className="brand">
-            <div className="brand-mark">N</div>
-            <div>
+
+        {/* NAVBAR */}
+        <header className="navbar">
+
+          {/* LOGO SECTION */}
+          <div className="logo">
+            <img src="/logo.png" alt="Logo" className="logo-img" />
+
+            <div className="logo-text">
               <div className="brand-name">Next Tech Solution</div>
               <div className="brand-tag">Insurance Leads & Data Vendor</div>
             </div>
           </div>
 
-          <nav className="nav">
-            <Link href="/" className="nav-link">
-              Home
-            </Link>
-            <Link href="/about" className="nav-link">
-              About
-            </Link>
-            <Link href="/services" className="nav-link">
-              Services
-            </Link>
-            <Link href="/contact" className="nav-link nav-cta">
-              Contact
-            </Link>
+          {/* MENU */}
+          <nav className="nav-links">
+            <Link href="/">Home</Link>
+            <Link href="/about">About</Link>
+            <Link href="/services">Services</Link>
+            <Link href="/contact">Contact</Link>
           </nav>
+
         </header>
 
-        <main className="page-shell">{children}</main>
+        {/* PAGE CONTENT */}
+        <main>{children}</main>
+
       </body>
     </html>
   );
