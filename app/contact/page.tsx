@@ -2,7 +2,6 @@
 
 import { useState } from "react";
 import emailjs from "@emailjs/browser";
-import "./contact.css";
 
 export default function Contact() {
   const [form, setForm] = useState({
@@ -29,7 +28,7 @@ export default function Contact() {
   };
 
   return (
-    <div className="page">
+    <div className="contact">
 
       <h1>Contact Us</h1>
 
@@ -38,24 +37,19 @@ export default function Contact() {
         <input
           placeholder="Name"
           onChange={(e) => setForm({ ...form, name: e.target.value })}
-          className="input"
         />
 
         <input
           placeholder="Email"
           onChange={(e) => setForm({ ...form, email: e.target.value })}
-          className="input"
         />
 
         <textarea
           placeholder="Message"
           onChange={(e) => setForm({ ...form, message: e.target.value })}
-          className="textarea"
         />
 
-        <button className="button">
-          Send Message
-        </button>
+        <button type="submit">Send Message</button>
 
       </form>
 
