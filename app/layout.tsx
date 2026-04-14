@@ -7,30 +7,16 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body
-        style={{
-          margin: 0,
-          fontFamily: "system-ui",
-          background: "#070b14",
-          color: "white",
-        }}
-      >
-        {/* NAVBAR */}
-        <div
-          style={{
-            display: "flex",
-            justifyContent: "space-between",
-            padding: "18px 40px",
-            borderBottom: "1px solid rgba(255,255,255,0.08)",
-            background: "rgba(255,255,255,0.03)",
-            position: "sticky",
-            top: 0,
-            zIndex: 1000,
-          }}
-        >
-          <h2 style={{ margin: 0 }}>Next Tech Solution</h2>
+      <body style={{ margin: 0, background: "#070b14", color: "white" }}>
 
-          <div style={{ display: "flex", gap: 20 }}>
+        {/* PREMIUM NAVBAR */}
+        <div style={navStyle}>
+          <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
+            <img src="/logo.png" style={{ height: 40 }} />
+            <h3 style={{ margin: 0 }}>Next Tech Solution</h3>
+          </div>
+
+          <div style={links}>
             <Link href="/">Home</Link>
             <Link href="/about">About</Link>
             <Link href="/services">Services</Link>
@@ -38,9 +24,30 @@ export default function RootLayout({
           </div>
         </div>
 
-        {/* PAGE CONTENT (CRITICAL LINE) */}
-        <main>{children}</main>
+        <div style={{ paddingTop: 80 }}>
+          {children}
+        </div>
+
       </body>
     </html>
   );
 }
+
+const navStyle = {
+  position: "fixed",
+  top: 0,
+  width: "100%",
+  display: "flex",
+  justifyContent: "space-between",
+  padding: "15px 40px",
+  background: "rgba(10,15,30,0.85)",
+  backdropFilter: "blur(10px)",
+  borderBottom: "1px solid rgba(255,255,255,0.08)",
+  zIndex: 1000,
+};
+
+const links = {
+  display: "flex",
+  gap: 20,
+  alignItems: "center",
+};

@@ -1,51 +1,50 @@
 "use client";
 
-import type { CSSProperties } from "react";
-
 export default function Home() {
   return (
-    <div style={styles.page}>
+    <div style={{ padding: 60 }}>
 
-      <div style={styles.hero}>
-        <h1 style={styles.title}>High Quality Insurance Leads</h1>
-        <p style={styles.subtitle}>
-          Final Expense, Medicare & USA Targeted Insurance Data
+      {/* HERO */}
+      <div style={{ textAlign: "center", marginTop: 40 }}>
+        <h1 style={{ fontSize: 50 }}>
+          Premium Insurance Leads & Data Vendor
+        </h1>
+
+        <p style={{ color: "#cbd5e1", maxWidth: 700, margin: "20px auto" }}>
+          Final Expense, Life Insurance, Medicare Leads & Verified Lead IDs for USA Call Centers
         </p>
       </div>
 
-      <div style={styles.boxContainer}>
+      {/* SERVICES */}
+      <h2 style={{ marginTop: 80, textAlign: "center" }}>Our Services</h2>
 
-        <div style={styles.box}>
-          <h2>Final Expense Leads</h2>
+      <div style={boxContainer}>
+
+        <div style={box}>
+          <h3>Final Expense Leads</h3>
           <p>High intent insurance buyers ready to convert.</p>
         </div>
 
-        <div style={styles.box}>
-          <h2>USA Targeted Data</h2>
-          <p>Verified and filtered insurance leads.</p>
+        <div style={box}>
+          <h3>Life Insurance Leads</h3>
+          <p>Quality leads for life insurance agencies.</p>
         </div>
 
-        <div style={styles.box}>
-          <h2>Premium Quality</h2>
-          <p>High conversion data for agencies & call centers.</p>
+        <div style={box}>
+          <h3>Data Vendor / Lead IDs</h3>
+          <p>Verified lead IDs and real-time data delivery.</p>
         </div>
 
       </div>
 
-      <div style={styles.cta}>
-        <h2>Grow Your Business Today</h2>
-        <p>Contact us for premium leads.</p>
-
-        <a href="/contact" style={styles.button}>
-          Get Started
-        </a>
+      {/* CTA */}
+      <div style={cta}>
+        <h2>Grow Your Insurance Business Today</h2>
+        <a href="/contact" style={button}>Contact Us</a>
       </div>
 
-      <a
-        href="https://wa.me/923091003892"
-        target="_blank"
-        style={styles.whatsapp}
-      >
+      {/* WHATSAPP */}
+      <a href="https://wa.me/923091003892" style={whatsapp}>
         WhatsApp
       </a>
 
@@ -53,76 +52,47 @@ export default function Home() {
   );
 }
 
-/* ✅ PROPER TYPE FIX */
-const styles: Record<string, CSSProperties> = {
-  page: {
-    background: "#070b14",
-    color: "white",
-    minHeight: "100vh",
-    fontFamily: "system-ui",
-    padding: "60px 20px"
-  },
+const boxContainer = {
+  display: "flex",
+  justifyContent: "center",
+  gap: 20,
+  flexWrap: "wrap",
+  marginTop: 40
+};
 
-  hero: {
-    textAlign: "center",
-    marginBottom: 60
-  },
+const box = {
+  width: 280,
+  padding: 25,
+  background: "rgba(255,255,255,0.05)",
+  borderRadius: 15,
+  border: "1px solid rgba(255,255,255,0.08)"
+};
 
-  title: {
-    fontSize: 50
-  },
+const cta = {
+  textAlign: "center",
+  marginTop: 80,
+  padding: 50,
+  background: "linear-gradient(135deg,#1e3a8a,#070b14)",
+  borderRadius: 20
+};
 
-  subtitle: {
-    color: "#cbd5e1",
-    maxWidth: 700,
-    margin: "10px auto"
-  },
+const button = {
+  display: "inline-block",
+  marginTop: 20,
+  padding: "12px 25px",
+  background: "#22c55e",
+  color: "white",
+  borderRadius: 30,
+  textDecoration: "none"
+};
 
-  boxContainer: {
-    display: "flex",
-    justifyContent: "center",
-    gap: 20,
-    flexWrap: "wrap",
-    marginTop: 50
-  },
-
-  box: {
-    width: 280,
-    padding: 25,
-    background: "rgba(255,255,255,0.05)",
-    border: "1px solid rgba(255,255,255,0.08)",
-    borderRadius: 15
-  },
-
-  cta: {
-    textAlign: "center",
-    marginTop: 80,
-    padding: 50,
-    background: "linear-gradient(135deg,#1e3a8a,#070b14)",
-    borderRadius: 20
-  },
-
-  button: {
-    display: "inline-block",
-    marginTop: 20,
-    padding: "12px 25px",
-    background: "#22c55e",
-    color: "white",
-    borderRadius: 30,
-    textDecoration: "none",
-    fontWeight: "bold"
-  },
-
-  whatsapp: {
-    position: "fixed",
-    bottom: 20,
-    right: 20,
-    background: "#25D366",
-    padding: "14px 18px",
-    borderRadius: 50,
-    color: "white",
-    textDecoration: "none",
-    fontWeight: "bold",
-    zIndex: 999
-  }
+const whatsapp = {
+  position: "fixed",
+  bottom: 20,
+  right: 20,
+  background: "#25D366",
+  padding: "14px 18px",
+  borderRadius: 50,
+  color: "white",
+  textDecoration: "none"
 };
