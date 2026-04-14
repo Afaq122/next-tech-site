@@ -1,0 +1,41 @@
+.page {
+  padding: 60px;
+  text-align: center;
+  background: #070b14;
+  color: white;
+  min-height: 100vh;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 400px;
+  margin: auto;
+}
+
+.input {
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #333;
+  background: #070b14;
+  color: white;
+}
+
+.textarea {
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #333;
+  background: #070b14;
+  color: white;
+  height: 120px;
+}
+
+.button {
+  padding: 12px;
+  background: #22c55e;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  cursor: pointer;
+}
