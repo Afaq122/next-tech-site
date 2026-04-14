@@ -1,3 +1,11 @@
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #070b14;
+  color: white;
+}
+
+/* NAVBAR */
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -25,7 +33,6 @@
   border-radius: 10px;
 }
 
-/* TEXT */
 .brand-name {
   font-size: 15px;
   font-weight: 700;
@@ -37,7 +44,7 @@
   color: #cbd5e1;
 }
 
-/* MENU */
+/* NAV LINKS */
 .nav-links {
   display: flex;
   gap: 18px;
@@ -47,14 +54,74 @@
   color: #cbd5e1;
   text-decoration: none;
   font-size: 14px;
-  transition: 0.2s;
 }
 
 .nav-links a:hover {
   color: white;
 }
 
-/* PAGE SHIFT (IMPORTANT) */
+/* PAGE WRAPPER */
 main {
   padding-top: 80px;
+}
+
+/* HERO (HOME RESTORE) */
+.home {
+  text-align: center;
+  padding: 100px 20px;
+}
+
+.hero h1 {
+  font-size: 48px;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  color: #cbd5e1;
+}
+
+/* BUTTON */
+.btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 25px;
+  background: linear-gradient(135deg, #2563eb, #22c55e);
+  color: white;
+  border-radius: 30px;
+  text-decoration: none;
+}
+
+/* CARDS */
+.features {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  padding: 60px 20px;
+}
+
+.card {
+  width: 260px;
+  padding: 22px;
+  border-radius: 16px;
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.08);
+}
+
+/* CTA */
+.cta {
+  text-align: center;
+  padding: 80px 20px;
+}
+
+/* WHATSAPP */
+.whatsapp {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #25D366;
+  padding: 15px 18px;
+  border-radius: 50px;
+  color: white;
+  text-decoration: none;
 }
