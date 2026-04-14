@@ -28,31 +28,31 @@ export default function Contact() {
   };
 
   return (
-    <div style={styles.page}>
+    <div style={pageStyle}>
 
       <h1>Contact Us</h1>
 
-      <form onSubmit={sendEmail} style={styles.form}>
+      <form onSubmit={sendEmail} style={formStyle}>
 
         <input
           placeholder="Name"
           onChange={(e) => setForm({ ...form, name: e.target.value })}
-          style={styles.input}
+          style={inputStyle}
         />
 
         <input
           placeholder="Email"
           onChange={(e) => setForm({ ...form, email: e.target.value })}
-          style={styles.input}
+          style={inputStyle}
         />
 
         <textarea
           placeholder="Message"
           onChange={(e) => setForm({ ...form, message: e.target.value })}
-          style={styles.textarea}
+          style={textAreaStyle}
         />
 
-        <button style={styles.button}>Send Message</button>
+        <button style={buttonStyle}>Send Message</button>
 
       </form>
 
@@ -60,47 +60,46 @@ export default function Contact() {
   );
 }
 
-/* ✅ NO TYPESCRIPT STYLING AT ALL (100% SAFE) */
-const styles = {
-  page: {
-    padding: 60,
-    textAlign: "center",
-    background: "#070b14",
-    color: "white",
-    minHeight: "100vh"
-  },
+/* 🔥 FINAL SAFE STYLES (NO TYPESCRIPT AT ALL) */
 
-  form: {
-    display: "flex",
-    flexDirection: "column",
-    gap: 10,
-    maxWidth: 400,
-    margin: "auto"
-  },
+const pageStyle = {
+  padding: "60px",
+  textAlign: "center",
+  background: "#070b14",
+  color: "white",
+  minHeight: "100vh"
+};
 
-  input: {
-    padding: 12,
-    borderRadius: 8,
-    border: "1px solid #333",
-    background: "#070b14",
-    color: "white"
-  },
+const formStyle = {
+  display: "flex",
+  flexDirection: "column",
+  gap: "10px",
+  maxWidth: "400px",
+  margin: "auto"
+};
 
-  textarea: {
-    padding: 12,
-    borderRadius: 8,
-    border: "1px solid #333",
-    background: "#070b14",
-    color: "white",
-    height: 120
-  },
+const inputStyle = {
+  padding: "12px",
+  borderRadius: "8px",
+  border: "1px solid #333",
+  background: "#070b14",
+  color: "white"
+};
 
-  button: {
-    padding: 12,
-    background: "#22c55e",
-    border: "none",
-    borderRadius: 8,
-    color: "white",
-    cursor: "pointer"
-  }
+const textAreaStyle = {
+  padding: "12px",
+  borderRadius: "8px",
+  border: "1px solid #333",
+  background: "#070b14",
+  color: "white",
+  height: "120px"
+};
+
+const buttonStyle = {
+  padding: "12px",
+  background: "#22c55e",
+  border: "none",
+  borderRadius: "8px",
+  color: "white",
+  cursor: "pointer"
 };
