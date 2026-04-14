@@ -1,4 +1,141 @@
-/* ABOUT PAGE */
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* BODY */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #070b14;
+  color: white;
+}
+
+/* ================= NAVBAR ================= */
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 25px;
+  background: rgba(0,0,0,0.75);
+  backdrop-filter: blur(12px);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+/* LOGO */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo-img {
+  width: 42px;
+  height: 42px;
+  object-fit: contain;
+  border-radius: 10px;
+}
+
+.brand-name {
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.brand-tag {
+  font-size: 12px;
+  color: #cbd5e1;
+}
+
+/* NAV LINKS */
+.nav-links {
+  display: flex;
+  gap: 18px;
+}
+
+.nav-links a {
+  color: #cbd5e1;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.nav-links a:hover {
+  color: white;
+}
+
+/* PAGE OFFSET (IMPORTANT) */
+main {
+  padding-top: 80px;
+}
+
+/* ================= HOME ================= */
+
+.home {
+  padding-top: 100px;
+  text-align: center;
+  min-height: 100vh;
+}
+
+/* HERO */
+.hero {
+  padding: 80px 20px;
+}
+
+.hero h1 {
+  font-size: 48px;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  color: #cbd5e1;
+}
+
+/* BUTTON */
+.btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 25px;
+  background: linear-gradient(135deg, #2563eb, #22c55e);
+  color: white;
+  border-radius: 30px;
+  text-decoration: none;
+}
+
+/* FEATURES */
+.features {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  padding: 60px 20px;
+}
+
+/* CARD (USED EVERYWHERE) */
+.card {
+  width: 260px;
+  padding: 22px;
+  border-radius: 16px;
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.08);
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+}
+
+/* CTA */
+.cta {
+  padding: 80px 20px;
+  background: linear-gradient(135deg, #0f172a, #070b14);
+}
+
+/* ================= ABOUT ================= */
+
 .about-page {
   padding: 120px 20px;
   max-width: 1000px;
@@ -30,7 +167,8 @@
   background: rgba(255,255,255,0.05);
 }
 
-/* SERVICES PAGE */
+/* ================= SERVICES ================= */
+
 .services-page {
   padding: 120px 20px;
   text-align: center;
@@ -62,4 +200,84 @@
 
 .service-card:hover {
   transform: translateY(-5px);
+}
+
+/* ================= CONTACT ================= */
+
+.contact-page {
+  padding: 120px 20px;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.contact-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.contact-header h1 {
+  font-size: 40px;
+}
+
+.contact-header p {
+  color: #cbd5e1;
+}
+
+.contact-container {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.contact-info {
+  flex: 1;
+  min-width: 280px;
+  background: rgba(255,255,255,0.05);
+  padding: 20px;
+  border-radius: 12px;
+}
+
+.contact-form {
+  flex: 1;
+  min-width: 280px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 12px;
+  border-radius: 10px;
+  border: none;
+  background: #111827;
+  color: white;
+}
+
+.contact-form textarea {
+  height: 140px;
+}
+
+.contact-form button {
+  padding: 12px;
+  border: none;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #2563eb, #22c55e);
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* ================= WHATSAPP ================= */
+
+.whatsapp {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #25D366;
+  padding: 15px 18px;
+  border-radius: 50px;
+  color: white;
+  text-decoration: none;
 }
