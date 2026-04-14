@@ -30,8 +30,8 @@ export default function Contact() {
 
       alert("Message sent successfully!");
       setForm({ name: "", email: "", message: "" });
-    } catch (error) {
-      console.log(error);
+    } catch (err) {
+      console.log(err);
       alert("Failed to send message");
     } finally {
       setLoading(false);
@@ -43,31 +43,37 @@ export default function Contact() {
 
       {/* HEADER */}
       <div className="contact-header">
-        <h1>Contact Us</h1>
+        <h1>Let’s Work Together</h1>
         <p>
-          Get in touch for <b>insurance leads</b>, <b>data vendor services</b>, or business inquiries.
+          Get in touch for <b>insurance leads</b>, <b>data solutions</b>,
+          or business partnerships.
         </p>
       </div>
 
-      {/* CONTAINER */}
+      {/* MAIN LAYOUT */}
       <div className="contact-container">
 
-        {/* LEFT INFO */}
-        <div className="contact-info">
-          <h2>Why Contact Us?</h2>
+        {/* LEFT PANEL */}
+        <div className="contact-info animate-left">
 
-          <p>✔ High-quality USA insurance leads</p>
-          <p>✔ Final Expense & Life Insurance data</p>
-          <p>✔ Fast response for agencies & call centers</p>
+          <h2>Why Choose Us?</h2>
+
+          <div className="info-item">✔ High-Quality USA Leads</div>
+          <div className="info-item">✔ Final Expense & Medicare Data</div>
+          <div className="info-item">✔ Fast Delivery System</div>
+          <div className="info-item">✔ Trusted by Agencies</div>
 
           <div className="contact-box">
             <p><b>Email:</b> nextgenteamsales@gmail.com</p>
             <p><b>WhatsApp:</b> +92 309 1003892</p>
           </div>
+
         </div>
 
         {/* FORM */}
-        <form className="contact-form" onSubmit={sendEmail}>
+        <form className="contact-form animate-right" onSubmit={sendEmail}>
+
+          <h2>Send Message</h2>
 
           <input
             type="text"
